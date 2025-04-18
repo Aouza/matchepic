@@ -2,67 +2,93 @@
 
 import React from 'react';
 
+const FloatingCard = ({ className = '', delay = '0' }: { className?: string, delay?: string }) => (
+  <div 
+    className={`relative rounded-2xl bg-gradient-to-br p-[2px] ${className}`}
+    style={{ animation: `float 6s ease-in-out infinite ${delay}` }}
+  >
+    <div className="relative rounded-2xl bg-gray-900/90 backdrop-blur-xl p-4 h-full">
+      <div className="absolute top-3 right-3">
+        <svg className="w-4 h-4 text-white/50" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+      </div>
+      <div className="aspect-[3/4] rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center">
+        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 blur-2xl opacity-50"></div>
+      </div>
+      <div className="mt-3">
+        <div className="h-2 w-16 bg-white/10 rounded"></div>
+        <div className="h-2 w-12 bg-white/5 rounded mt-2"></div>
+      </div>
+    </div>
+  </div>
+);
+
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background com gradiente e efeito de mesh */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-purple-800 to-black">
-        <div className="absolute inset-0 bg-[url('/mesh-gradient.png')] opacity-20 mix-blend-overlay"></div>
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0A0B14]">
+      {/* Background gradients */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl"></div>
       </div>
 
-      {/* Círculos decorativos */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-600/30 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-800/20 rounded-full blur-3xl"></div>
-
-      {/* Conteúdo principal */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="text-center">
-          <div className="flex justify-center mb-8">
-            <span className="inline-flex items-center px-4 py-1.5 rounded-full text-sm font-medium bg-purple-100 text-purple-800">
-              ✨ Powered by AI
-            </span>
-          </div>
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-8 text-white leading-tight">
-            Transforme suas selfies<br />em fotos épicas
-          </h1>
-          <p className="text-xl sm:text-2xl mb-12 max-w-3xl mx-auto text-gray-200 leading-relaxed">
-            Fotos realistas e impactantes geradas por IA para destacar sua melhor versão em apps de relacionamento e redes sociais
-          </p>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="w-full sm:w-auto bg-white hover:bg-gray-50 text-purple-900 font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center space-x-2">
-              <span>Começar Agora</span>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-            <button className="w-full sm:w-auto bg-purple-700/20 backdrop-blur-sm border-2 border-purple-500/50 hover:border-purple-400 text-white font-bold py-4 px-10 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-              Ver Exemplos
-            </button>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text content */}
+          <div>
+            <div className="flex items-center space-x-2 mb-8">
+              <div className="flex h-6 items-center space-x-2 rounded-full bg-blue-900/30 px-3 text-sm text-blue-200">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
+                </span>
+                <span>Powered by AI</span>
+              </div>
+            </div>
+            
+            <h1 className="text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
+              Transforme suas selfies em fotos épicas
+              <span className="inline-block ml-2">
+                <svg className="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+              </span>
+            </h1>
+
+            <p className="text-xl text-gray-300 mb-12 leading-relaxed max-w-2xl">
+              Fotos realistas e impactantes geradas por IA para destacar sua melhor versão em apps de relacionamento e redes sociais
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:opacity-90 transition-all duration-200 transform hover:scale-105">
+                <span>Começar Agora</span>
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </button>
+              <button className="inline-flex items-center px-6 py-3 rounded-full border border-gray-600 text-gray-300 hover:bg-white/5 transition-all duration-200">
+                Ver Exemplos
+              </button>
+            </div>
           </div>
 
-          {/* Métricas/Social Proof */}
-          <div className="mt-20 grid grid-cols-2 sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">1000+</div>
-              <div className="text-gray-300">Usuários Ativos</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">98%</div>
-              <div className="text-gray-300">Satisfação</div>
-            </div>
-            <div className="text-center sm:col-span-1 col-span-2">
-              <div className="text-3xl font-bold text-white mb-2">24h</div>
-              <div className="text-gray-300">Entrega</div>
-            </div>
+          {/* Floating cards */}
+          <div className="relative h-[600px]">
+            <FloatingCard 
+              className="absolute top-0 right-0 w-64 from-emerald-500 to-blue-500" 
+              delay="0s"
+            />
+            <FloatingCard 
+              className="absolute top-1/4 left-0 w-56 from-purple-500 to-pink-500" 
+              delay="-2s"
+            />
+            <FloatingCard 
+              className="absolute bottom-0 right-1/4 w-60 from-blue-500 to-indigo-500" 
+              delay="-4s"
+            />
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-        </svg>
       </div>
     </section>
   );
