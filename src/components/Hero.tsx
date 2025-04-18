@@ -72,19 +72,19 @@ const Hero = () => {
               </button>
             </div>
           </div>
-
+          
           {/* Floating cards */}
-          <div className="relative h-[600px]">
-            <FloatingCard 
-              className="absolute top-0 right-0 w-64 from-emerald-500 to-blue-500" 
+          <div className="relative h-[600px] flex items-start justify-end">
+            <FloatingCard
+              className="absolute right-12 -top-8 w-56 from-emerald-500 to-blue-500" 
               delay="0s"
             />
-            <FloatingCard 
-              className="absolute top-1/4 left-0 w-56 from-purple-500 to-pink-500" 
+            <FloatingCard
+              className="absolute right-0 top-24 w-56 from-purple-500 to-pink-500" 
               delay="-2s"
             />
-            <FloatingCard 
-              className="absolute bottom-0 right-1/4 w-60 from-blue-500 to-indigo-500" 
+            <FloatingCard
+              className="absolute right-20 top-56 w-56 from-blue-500 to-indigo-500" 
               delay="-4s"
             />
           </div>
