@@ -35,7 +35,7 @@ const CTA = () => {
             Quero minhas fotos épicas agora
             <span className="text-xl">→</span>
           </button>
-          <a 
+          <a
             href="#resultados" 
             className="px-8 py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/20 transition-all duration-200 backdrop-blur-sm"
           >

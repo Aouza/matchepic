@@ -51,7 +51,7 @@ const Hero = () => {
       {/* Navigation */}
       <nav className="relative z-10 w-full py-6 px-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500"></div>
             <span className="text-white font-medium">MatchEpic</span>
           </div>
