@@ -97,6 +97,58 @@ const Hero = () => {
                   Como Funciona
                 </a>
               </div>
+
+              {/* Social Proof */}
+              <div className="mt-12 space-y-6">
+                {/* Avatares e Contagem */}
+                <div className="flex items-center justify-center lg:justify-start gap-2">
+                  <div className="flex -space-x-2">
+                    <div className="w-8 h-8 rounded-full border-2 border-[#0B0C15] overflow-hidden">
+                      <img src="/avatars/avatar1.jpg" alt="Cliente" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="w-8 h-8 rounded-full border-2 border-[#0B0C15] overflow-hidden">
+                      <img src="/avatars/avatar2.jpg" alt="Cliente" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="w-8 h-8 rounded-full border-2 border-[#0B0C15] overflow-hidden">
+                      <img src="/avatars/avatar3.jpg" alt="Cliente" className="w-full h-full object-cover" />
+                    </div>
+                    <div className="w-8 h-8 rounded-full border-2 border-[#0B0C15] overflow-hidden">
+                      <img src="/avatars/avatar4.jpg" alt="Cliente" className="w-full h-full object-cover" />
+                    </div>
+                  </div>
+                  <span className="text-sm text-gray-300 ml-2">
+                    +847 clientes já transformaram seus perfis com MatchEpic
+                  </span>
+                </div>
+
+                {/* Rating e Reviews */}
+                <div className="flex items-center justify-center lg:justify-start gap-2">
+                  <div className="flex items-center gap-1">
+                    <span className="text-yellow-400">★</span>
+                    <span className="text-yellow-400">★</span>
+                    <span className="text-yellow-400">★</span>
+                    <span className="text-yellow-400">★</span>
+                    <span className="text-yellow-400">★</span>
+                  </div>
+                  <span className="text-sm text-gray-300">
+                    4.8 de 523 avaliações
+                  </span>
+                </div>
+
+                {/* Mini CTA */}
+                <div className="flex items-center justify-center lg:justify-start">
+                  <a 
+                    href="#resultados" 
+                    className="inline-flex items-center gap-2 text-sm text-purple-200 hover:text-white transition-colors duration-200"
+                  >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    Veja exemplos reais de resultados
+                    <span className="text-lg">→</span>
+                  </a>
+                </div>
+              </div>
             </div>
             
             {/* Floating cards */}
