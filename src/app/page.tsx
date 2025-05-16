@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
-import Hero from '../components/Hero';
-import Features from '../components/Features';
+import Hero from '@/components/Hero';
+import Features from '@/components/Features';
 import Results from '../components/Results';
-import HowItWorks from '../components/HowItWorks';
+import HowItWorks from '@/components/HowItWorks';
 import CTA from '../components/CTA';
 
 export default function Home() {
