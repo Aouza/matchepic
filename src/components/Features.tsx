@@ -101,10 +101,8 @@ const Features = () => {
             <div className="relative group">
               <div className="absolute inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
               <div className="relative bg-gray-900/50 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
-                <div className="aspect-[4/3] rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 mb-4">
-                  <div className="w-full h-full flex items-center justify-center text-gray-400">
-                    Antes/Depois #1
-                  </div>
+                <div className="aspect-[4/3] rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 mb-4 flex items-center justify-center">
+                  <img src="/mock-antes-depois-1.png" alt="Antes e Depois 1" className="object-cover w-full h-full rounded-lg shadow-lg" />
                 </div>
                 <p className="text-gray-300 text-sm">
                   "Aumentei de 2 para 7 matches por dia após usar as fotos do MatchEpic"
@@ -115,10 +113,8 @@ const Features = () => {
             <div className="relative group">
               <div className="absolute inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
               <div className="relative bg-gray-900/50 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
-                <div className="aspect-[4/3] rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 mb-4">
-                  <div className="w-full h-full flex items-center justify-center text-gray-400">
-                    Antes/Depois #2
-                  </div>
+                <div className="aspect-[4/3] rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 mb-4 flex items-center justify-center">
+                  <img src="/mock-antes-depois-2.png" alt="Antes e Depois 2" className="object-cover w-full h-full rounded-lg shadow-lg" />
                 </div>
                 <p className="text-gray-300 text-sm">
                   "As fotos ficaram tão naturais que ninguém acredita que são geradas por IA"

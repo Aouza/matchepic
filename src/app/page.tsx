@@ -6,6 +6,7 @@ import Features from '@/components/Features';
 import Results from '../components/Results';
 import Pricing from '@/components/Pricing';
 import HowItWorks from '@/components/HowItWorks';
+import FAQ from '@/components/FAQ';
 import CTA from '../components/CTA';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Results />
       <Pricing />
       <HowItWorks />
+      <FAQ />
       <CTA />
     </main>
   );

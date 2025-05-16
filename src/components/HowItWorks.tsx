@@ -11,7 +11,7 @@ const steps = [
   },
   {
     title: '2. Envie suas Fotos',
-    description: 'Após a compra, você será direcionado para enviar suas selfies e fotos de referência.',
+    description: 'Após o pagamento, você acessa o painel para enviar suas fotos e preferências.',
     icon: '📸',
     gradient: 'from-purple-500 to-pink-500'
   },

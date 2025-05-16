@@ -89,8 +89,9 @@ const Hero = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <button className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium hover:opacity-90 transition-all duration-200 transform hover:scale-105">
-                  Comprar Pacote de Fotos — R$ 97
+                <button className="px-8 py-3 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium hover:opacity-90 transition-all duration-200 transform hover:scale-105 flex items-center gap-2">
+                  Melhorar Meu Perfil Agora
+                  <span className="text-xl">→</span>
                 </button>
                 <a href="#como-funciona" className="px-8 py-3 rounded-full bg-white/10 text-white font-medium hover:bg-white/20 transition-all duration-200 backdrop-blur-sm">
                   Como Funciona
