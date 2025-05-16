@@ -194,13 +194,19 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <button className={`w-full px-8 py-4 rounded-xl font-medium transition-all duration-200 transform hover:scale-105 ${
-                pack.highlight
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-xl'
-                  : 'bg-white/10 text-white hover:bg-white/20'
-              }`}>
-                {pack.cta}
-              </button>
+              <div className="flex flex-col gap-4">
+                <a
+                  href="https://pay.hotmart.com/SEU_LINK_AQUI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full px-6 py-4 text-center text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  Quero minhas fotos épicas agora
+                </a>
+                <p className="text-sm text-gray-400 text-center">
+                  Receba suas fotos em até 72h e cause impacto nos apps
+                </p>
+              </div>
             </div>
           ))}
         </div>

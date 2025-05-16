@@ -20,64 +20,113 @@ const BeforeAfterCard = ({ title, description }: { title: string; description: s
 
 const Results = () => {
   return (
-    <section className="relative py-20 overflow-hidden" id="resultados">
-      {/* Background com estrelas */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-1 h-1 bg-white rounded-full top-[20%] left-[35%] animate-twinkle"></div>
-        <div className="absolute w-1 h-1 bg-white rounded-full top-[50%] left-[15%] animate-twinkle delay-100"></div>
-        <div className="absolute w-1 h-1 bg-white rounded-full top-[30%] left-[85%] animate-twinkle delay-200"></div>
-      </div>
-
-      {/* Gradientes de fundo */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl"></div>
-      </div>
-
+    <section id="resultados" className="relative py-24 overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B14] to-[#0A0B14]/95" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+      
+      {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Veja como nossos clientes estão se destacando com MatchEpic
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Eles já transformaram seus perfis. Agora é sua vez.
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Resultados reais de quem já transformou seu perfil com nossas fotos
+            Veja os resultados reais de quem usou o MatchEpic para causar impacto nos apps e nas redes.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Print do Tinder */}
+        {/* Grid de Resultados */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Card 1: Depoimento em Vídeo */}
           <div className="relative group">
-            <div className="absolute inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
-            <div className="relative bg-gray-900/50 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
-              <div className="aspect-[9/16] rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 mb-4">
-                <img 
-                  src="/mock-tinder-matches.png" 
-                  alt="Tinder Matches" 
-                  className="object-cover w-full h-full rounded-lg shadow-lg"
-                />
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="aspect-video bg-black/20 rounded-xl overflow-hidden mb-4">
+                <video 
+                  className="w-full h-full object-cover"
+                  poster="/video-thumbnail.jpg"
+                  controls
+                >
+                  <source src="/testimonial-video.mp4" type="video/mp4" />
+                </video>
               </div>
-              <p className="text-gray-300 text-sm">
-                "Aumentei de 2 para 7 matches por dia após usar as fotos do MatchEpic"
+              <p className="text-gray-300 italic">
+                "Nunca imaginei que IA poderia fazer uma foto minha parecer tão natural! Meus amigos nem perceberam que era gerada."
               </p>
+              <p className="text-emerald-400 mt-2 font-medium">- Ana, 28 anos</p>
             </div>
           </div>
 
-          {/* Vídeo/GIF de antes/depois */}
+          {/* Card 2: Print do Tinder */}
           <div className="relative group">
-            <div className="absolute inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
-            <div className="relative bg-gray-900/50 backdrop-blur-xl p-6 rounded-2xl border border-white/10">
-              <div className="aspect-video rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 mb-4">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="aspect-[4/3] bg-black/20 rounded-xl overflow-hidden mb-4">
                 <img 
-                  src="/mock-before-after.gif" 
-                  alt="Antes e Depois" 
-                  className="object-cover w-full h-full rounded-lg shadow-lg"
+                  src="/tinder-matches.jpg" 
+                  alt="Aumento de matches no Tinder"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-gray-300 text-sm">
-                "As fotos ficaram tão naturais que ninguém acredita que são geradas por IA"
+              <p className="text-gray-300 italic">
+                "Tive 2x mais matches na primeira semana. As fotos ficaram tão naturais que meus amigos acharam que foi um ensaio."
               </p>
+              <p className="text-emerald-400 mt-2 font-medium">- Pedro, 32 anos</p>
             </div>
           </div>
+
+          {/* Card 3: Antes/Depois */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="aspect-[4/3] bg-black/20 rounded-xl overflow-hidden mb-4">
+                <img 
+                  src="/before-after.jpg" 
+                  alt="Antes e depois do MatchEpic"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-gray-300 italic">
+                "As fotos ficaram tão naturais que meus amigos nem perceberam que eram geradas por IA. Agora meu perfil está muito mais atraente!"
+              </p>
+              <p className="text-emerald-400 mt-2 font-medium">- Maria, 25 anos</p>
+            </div>
+          </div>
+
+          {/* Card 4: Quote Visual */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
+              <div className="aspect-[4/3] bg-black/20 rounded-xl overflow-hidden mb-4">
+                <img 
+                  src="/quote-visual.jpg" 
+                  alt="Depoimento visual"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <p className="text-gray-300 italic">
+                "Nunca imaginei que IA poderia fazer uma foto minha parecer tão natural! Meus amigos nem perceberam que era gerada."
+              </p>
+              <p className="text-emerald-400 mt-2 font-medium">- João, 30 anos</p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Final */}
+        <div className="text-center mt-16">
+          <p className="text-2xl font-bold text-white mb-6">
+            Quer ver seu perfil aqui também?
+          </p>
+          <a
+            href="#precos"
+            className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Comece agora
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>
