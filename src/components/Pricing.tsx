@@ -58,8 +58,8 @@ const Pricing = () => {
             <span>📣</span>
             <span>Vagas limitadas: pedidos feitos até domingo recebem em até 72h. Depois, fila de espera.</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-            Mais Matches. Perfil Profissional. Sem gastar com ensaio.
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+            <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">Mais Matches.</span> Perfil Profissional. Sem gastar com ensaio.
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
             Escolha seu pacote e receba fotos épicas em até 72h.

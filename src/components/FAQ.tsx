@@ -19,7 +19,9 @@ const FAQ = () => (
   <section className="relative py-20 bg-[#0B0C15]">
     <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold text-white mb-4">Perguntas Frequentes</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+          <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Perguntas frequentes</span>
+        </h2>
         <p className="text-gray-300">Tire suas dúvidas antes de garantir suas fotos épicas!</p>
       </div>
       <div className="space-y-8">

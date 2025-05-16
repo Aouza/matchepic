@@ -28,8 +28,9 @@ const Results = () => {
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Eles já transformaram seus perfis. Agora é sua vez.
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+            Veja resultados <br />
+            <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">de quem já usou</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Veja os resultados reais de quem usou o MatchEpic para causar impacto nos apps e nas redes.

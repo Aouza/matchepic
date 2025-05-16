@@ -22,8 +22,8 @@ const CTA = () => {
       </div>
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6 leading-tight">
-          Destaque-se nos apps e nas redes com fotos que realmente impressionam
+        <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+          <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Destaque-se</span> nos apps e nas redes
         </h2>
         
         <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">

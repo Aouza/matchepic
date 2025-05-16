@@ -56,8 +56,9 @@ const HowItWorks = () => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Como Funciona
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+            Como funciona <br />
+            <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">na prática</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Processo simples e rápido para transformar suas fotos
