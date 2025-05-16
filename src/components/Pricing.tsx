@@ -54,13 +54,15 @@ const Pricing = () => {
     <section className="relative py-24 bg-[#0B0C15]" id="precos">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
-          <div className="inline-flex items-center space-x-2 rounded-full bg-white/10 px-3 py-1 text-sm text-blue-200 backdrop-blur-sm mb-4">
+          <div className="inline-flex items-center space-x-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-4 py-2 text-sm text-white backdrop-blur-sm mb-4 shadow-lg">
             <span>📸</span>
             <span>Quanto custa um ensaio profissional?</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Em média R$ 500 a R$ 800 — sem contar deslocamento, agenda e edição.</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            Em média <span className="text-red-400 font-extrabold">R$ 500 a R$ 800</span> — e você ainda perde tempo com deslocamento, agenda e espera pela edição.
+          </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Com o <span className="font-bold text-white">MatchEpic</span>, você tem fotos com qualidade profissional a partir de <span className="font-bold text-emerald-400">R$ 97</span> — sem sair de casa.
+            <span className="font-bold text-white">MatchEpic</span> entrega <span className="text-emerald-400 font-bold">fotos profissionais</span> a partir de <span className="font-bold text-emerald-400">R$ 97</span>, <span className="underline decoration-emerald-400">sem sair de casa</span> e <span className="underline decoration-emerald-400">prontas em até 72h</span>.
           </p>
         </div>
       </div>
