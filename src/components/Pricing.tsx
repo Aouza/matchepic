@@ -55,17 +55,118 @@ const Pricing = () => {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="text-center">
           <div className="inline-flex items-center space-x-2 rounded-full bg-gradient-to-r from-red-500 to-orange-500 px-4 py-2 text-sm text-white backdrop-blur-sm mb-4 shadow-lg">
-            <span>📸</span>
-            <span>Quanto custa um ensaio profissional?</span>
+            <span>📣</span>
+            <span>Vagas limitadas: pedidos feitos até domingo recebem em até 72h. Depois, fila de espera.</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Em média <span className="text-red-400 font-extrabold">R$ 500 a R$ 800</span> — e você ainda perde tempo com deslocamento, agenda e espera pela edição.
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+            Mais Matches. Perfil Profissional. Sem gastar com ensaio.
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            <span className="font-bold text-white">MatchEpic</span> entrega <span className="text-emerald-400 font-bold">fotos profissionais</span> a partir de <span className="font-bold text-emerald-400">R$ 97</span>, <span className="underline decoration-emerald-400">sem sair de casa</span> e <span className="underline decoration-emerald-400">prontas em até 72h</span>.
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto mb-8">
+            Escolha seu pacote e receba fotos épicas em até 72h.
           </p>
         </div>
       </div>
+
+      {/* Tabela Comparativa */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <div className="bg-gray-900/50 backdrop-blur-xl rounded-2xl border border-white/10 p-8">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-white mb-2">Comparativo: MatchEpic vs Ensaio Tradicional</h3>
+            <p className="text-gray-400">Escolha a melhor opção para seu perfil</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* MatchEpic */}
+            <div className="relative group">
+              <div className="absolute inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
+              <div className="relative bg-gray-900/70 backdrop-blur-xl p-6 rounded-2xl border border-purple-500/20">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-lg">M</div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white">MatchEpic</h4>
+                    <p className="text-emerald-400 text-sm">Recomendado</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">💰</span>
+                    <div>
+                      <span className="text-gray-400 text-sm">Preço</span>
+                      <p className="text-emerald-400 font-bold">R$ 97–R$ 297</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">⚡</span>
+                    <div>
+                      <span className="text-gray-400 text-sm">Tempo</span>
+                      <p className="text-emerald-400 font-bold">Até 72h</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🎯</span>
+                    <div>
+                      <span className="text-gray-400 text-sm">Locais & Estilos</span>
+                      <p className="text-emerald-400 font-bold">Vários presets</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">✨</span>
+                    <div>
+                      <span className="text-gray-400 text-sm">Agendamento</span>
+                      <p className="text-emerald-400 font-bold">Online, prático</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Ensaio Tradicional */}
+            <div className="relative group">
+              <div className="absolute inset-0.5 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl blur-3xl opacity-20 group-hover:opacity-60 transition-opacity"></div>
+              <div className="relative bg-gray-900/70 backdrop-blur-xl p-6 rounded-2xl border border-red-500/20">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white font-bold text-lg">E</div>
+                  <div>
+                    <h4 className="text-xl font-bold text-white">Ensaio Tradicional</h4>
+                    <p className="text-red-400 text-sm">Custo Alto</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">💸</span>
+                    <div>
+                      <span className="text-gray-400 text-sm">Preço</span>
+                      <p className="text-red-400 font-bold">R$ 500–R$ 800</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">⏳</span>
+                    <div>
+                      <span className="text-gray-400 text-sm">Tempo</span>
+                      <p className="text-red-400 font-bold">1 a 2 semanas</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🚫</span>
+                    <div>
+                      <span className="text-gray-400 text-sm">Locais & Estilos</span>
+                      <p className="text-red-400 font-bold">Limitado ao ensaio</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">😫</span>
+                    <div>
+                      <span className="text-gray-400 text-sm">Agendamento</span>
+                      <p className="text-red-400 font-bold">Deslocamento, agenda</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {packages.map((pack, idx) => (
@@ -105,7 +206,7 @@ const Pricing = () => {
         </div>
       </div>
       <p className="text-center text-sm text-gray-400 mt-8">
-        Garantia de Satisfação: revisão gratuita e reembolso se não gostar.{' '}
+        Garantia de Satisfação: você tem direito a 1 revisão gratuita para garantir seu melhor resultado.{' '}
         <a href="/termos" className="text-blue-400 hover:text-blue-300 underline">Consulte nossos Termos</a>
       </p>
     </section>
