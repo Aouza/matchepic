@@ -72,8 +72,9 @@ const Features = () => {
         </div>
 
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Por que escolher o MatchEpic?
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+            Funcionalidades que <br />
+            <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">fazem a diferença</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Uma solução completa e inovadora para transformar sua presença digital, com resultados reais e comprovados
@@ -89,8 +90,8 @@ const Features = () => {
         {/* Social Proof Section */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Resultados Reais
+            <h3 className="text-2xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">Resultados Reais</span>
             </h3>
             <p className="text-gray-300">
               Veja o antes e depois de alguns de nossos clientes
