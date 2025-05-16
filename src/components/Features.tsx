@@ -30,17 +30,15 @@ const features = [
 ];
 
 const FeatureCard = ({ feature, index }: { feature: typeof features[0], index: number }) => (
-  <div className="relative group">
-    <div className={`absolute inset-0.5 bg-gradient-to-r ${feature.gradient} rounded-2xl blur-3xl opacity-20 group-hover:opacity-60 transition-opacity`}></div>
-    <div className="relative bg-gray-900/50 backdrop-blur-xl p-8 rounded-2xl border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:-translate-y-1">
-      <div className="flex items-center gap-4 mb-6">
-        <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-2xl`}>
-          {feature.icon}
-        </div>
-        <div className="text-sm text-gray-400">0{index + 1}</div>
-      </div>
-      <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-      <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+  <div className="relative group flex flex-col items-center justify-start">
+    {/* Ícone flutuante fora da caixa */}
+    <div className={`absolute -top-8 left-1/2 -translate-x-1/2 z-10 w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-3xl shadow-xl group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-300`} style={{ filter: 'drop-shadow(0 4px 24px rgba(80,80,255,0.15))' }}>
+      {feature.icon}
+    </div>
+    {/* Card glassmorphism */}
+    <div className="relative bg-white/10 backdrop-blur-2xl p-8 pt-14 rounded-3xl border border-white/10 shadow-xl flex-1 w-full min-h-[260px] flex flex-col items-center justify-start transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:border-blue-400/40 group-hover:bg-blue-200/10">
+      <h3 className="text-lg font-bold text-white mb-3 text-center">{feature.title}</h3>
+      <p className="text-gray-300 text-sm text-center leading-relaxed">{feature.description}</p>
     </div>
   </div>
 );
@@ -81,7 +79,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {features.map((feature, index) => (
             <FeatureCard key={index} feature={feature} index={index} />
           ))}
