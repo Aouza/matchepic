@@ -4,6 +4,7 @@ import React from 'react';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Results from '../components/Results';
+import Pricing from '@/components/Pricing';
 import HowItWorks from '@/components/HowItWorks';
 import CTA from '../components/CTA';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Results />
+      <Pricing />
       <HowItWorks />
       <CTA />
     </main>
