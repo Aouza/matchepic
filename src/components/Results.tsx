@@ -1,134 +1,122 @@
 'use client';
 
 import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
-const BeforeAfterCard = ({ title, description }: { title: string; description: string }) => (
-  <div className="relative group">
-    <div className="absolute inset-0.5 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity"></div>
-    <div className="relative bg-gray-900/50 backdrop-blur-xl p-6 rounded-2xl border border-white/10 hover:border-white/20 transition-all">
-      <div className="aspect-[4/5] rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 mb-4">
-        {/* Aqui entraria a imagem real */}
-        <div className="w-full h-full bg-gradient-to-br from-purple-900 to-blue-900 flex items-center justify-center">
-          <span className="text-white/50">Imagem</span>
-        </div>
-      </div>
-      <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-      <p className="text-gray-300 text-sm">{description}</p>
-    </div>
-  </div>
-);
+const slides = [
+  {
+    image: '/before-after.jpg',
+    alt: 'Antes e depois do MatchEpic',
+    story: 'Aumentou seus matches em 3x com as novas fotos.',
+    quote: 'As fotos ficaram tão naturais que meus amigos nem perceberam que eram geradas por IA. Agora meu perfil está muito mais atraente!',
+    name: 'Maria, 25 anos',
+  },
+  {
+    image: '/tinder-matches.jpg',
+    alt: 'Aumento de matches no Tinder',
+    story: 'De 2 para 7 matches por dia após usar o MatchEpic.',
+    quote: 'Tive 2x mais matches na primeira semana. As fotos ficaram tão naturais que meus amigos acharam que foi um ensaio.',
+    name: 'Pedro, 32 anos',
+  },
+  {
+    image: '/quote-visual.jpg',
+    alt: 'Depoimento visual',
+    story: 'Perfil ficou mais atraente e autêntico.',
+    quote: 'Nunca imaginei que IA poderia fazer uma foto minha parecer tão natural! Meus amigos nem perceberam que era gerada.',
+    name: 'João, 30 anos',
+  },
+  {
+    image: '/video-thumbnail.jpg',
+    alt: 'Depoimento em vídeo',
+    story: 'Conquistou mais confiança nos apps.',
+    quote: 'Nunca imaginei que IA poderia fazer uma foto minha parecer tão natural! Meus amigos nem perceberam que era gerada.',
+    name: 'Ana, 28 anos',
+    video: '/testimonial-video.mp4',
+  },
+];
 
 const Results = () => {
   return (
-    <section id="resultados" className="relative py-24 overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B14] to-[#0A0B14]/95" />
-      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
-      
-      {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
-            Veja resultados <br />
-            <span className="bg-gradient-to-r from-blue-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">de quem já usou</span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Veja os resultados reais de quem usou o MatchEpic para causar impacto nos apps e nas redes.
-          </p>
-        </div>
+    <section id="resultados" className="relative py-28 overflow-hidden bg-[#0A0B14]">
+      {/* Fundo visual forte */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B14] to-[#0A0B14]/95 z-0" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] z-0" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent rounded-full blur-3xl z-0" />
 
-        {/* Grid de Resultados */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Card 1: Depoimento em Vídeo */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
-            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-              <div className="aspect-video bg-black/20 rounded-xl overflow-hidden mb-4">
-                <video 
-                  className="w-full h-full object-cover"
-                  poster="/video-thumbnail.jpg"
-                  controls
-                >
-                  <source src="/testimonial-video.mp4" type="video/mp4" />
-                </video>
+      {/* Statement Section */}
+      <div className="relative z-10 max-w-2xl mx-auto text-center mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-3 text-white">
+          Resultados Reais de Quem Usou
+        </h2>
+        <p className="text-base sm:text-lg text-gray-300">
+          Veja como o MatchEpic transformou perfis e aumentou resultados de verdade.
+        </p>
+      </div>
+
+      {/* Slider de Resultados */}
+      <div className="relative z-10 max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+          spaceBetween={24}
+          slidesPerView={3}
+          className="pb-12"
+        >
+          {slides.map((slide, idx) => (
+            <SwiperSlide key={idx}>
+              <div className="flex flex-col items-center">
+                <div className="absolute -inset-2 bg-gradient-to-r from-purple-500/30 to-blue-500/30 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition-opacity z-0" />
+                <div className="relative bg-white/5 backdrop-blur-2xl rounded-3xl border border-white/10 shadow-2xl p-8 flex flex-col items-center z-10 perspective-1000">
+                  <div className="aspect-[4/3] w-full rounded-xl overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 mb-6 shadow-lg transform group-hover:rotate-y-3 group-hover:scale-105 transition-transform duration-500">
+                    {slide.video ? (
+                      <video
+                        className="w-full h-full object-cover rounded-xl"
+                        poster={slide.image}
+                        controls
+                      >
+                        <source src={slide.video} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <img
+                        src={slide.image}
+                        alt={slide.alt}
+                        className="w-full h-full object-cover rounded-xl"
+                      />
+                    )}
+                  </div>
+                  {/* Micro-story */}
+                  <div className="text-lg sm:text-xl font-semibold text-blue-400 mb-2 text-center">
+                    {slide.story}
+                  </div>
+                  {/* Quote */}
+                  <p className="text-gray-200 italic text-center mb-2">"{slide.quote}"</p>
+                  <p className="text-emerald-400 font-medium text-center">- {slide.name}</p>
+                </div>
               </div>
-              <p className="text-gray-300 italic">
-                "Nunca imaginei que IA poderia fazer uma foto minha parecer tão natural! Meus amigos nem perceberam que era gerada."
-              </p>
-              <p className="text-emerald-400 mt-2 font-medium">- Ana, 28 anos</p>
-            </div>
-          </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
 
-          {/* Card 2: Print do Tinder */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
-            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-              <div className="aspect-[4/3] bg-black/20 rounded-xl overflow-hidden mb-4">
-                <img 
-                  src="/tinder-matches.jpg" 
-                  alt="Aumento de matches no Tinder"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-gray-300 italic">
-                "Tive 2x mais matches na primeira semana. As fotos ficaram tão naturais que meus amigos acharam que foi um ensaio."
-              </p>
-              <p className="text-emerald-400 mt-2 font-medium">- Pedro, 32 anos</p>
-            </div>
-          </div>
-
-          {/* Card 3: Antes/Depois */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
-            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-              <div className="aspect-[4/3] bg-black/20 rounded-xl overflow-hidden mb-4">
-                <img 
-                  src="/before-after.jpg" 
-                  alt="Antes e depois do MatchEpic"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-gray-300 italic">
-                "As fotos ficaram tão naturais que meus amigos nem perceberam que eram geradas por IA. Agora meu perfil está muito mais atraente!"
-              </p>
-              <p className="text-emerald-400 mt-2 font-medium">- Maria, 25 anos</p>
-            </div>
-          </div>
-
-          {/* Card 4: Quote Visual */}
-          <div className="relative group">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300" />
-            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300">
-              <div className="aspect-[4/3] bg-black/20 rounded-xl overflow-hidden mb-4">
-                <img 
-                  src="/quote-visual.jpg" 
-                  alt="Depoimento visual"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <p className="text-gray-300 italic">
-                "Nunca imaginei que IA poderia fazer uma foto minha parecer tão natural! Meus amigos nem perceberam que era gerada."
-              </p>
-              <p className="text-emerald-400 mt-2 font-medium">- João, 30 anos</p>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Final */}
-        <div className="text-center mt-16">
-          <p className="text-2xl font-bold text-white mb-6">
-            Quer ver seu perfil aqui também?
-          </p>
-          <a
-            href="#precos"
-            className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Comece agora
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-        </div>
+      {/* CTA Final */}
+      <div className="relative z-10 text-center mt-16">
+        <p className="text-2xl font-bold text-white mb-6">
+          Quer ver seu perfil aqui também?
+        </p>
+        <a
+          href="#precos"
+          className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-xl"
+        >
+          Comece agora
+          <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
       </div>
     </section>
   );
