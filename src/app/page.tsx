@@ -22,11 +22,8 @@ export default function Home() {
           <div className="flex-1 flex flex-col justify-center items-start mb-12 md:mb-0">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
               <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Primeiras impressões
-              </span>{" "}
-              são visuais.
-              <br />
-              <span className="text-purple-200">E instantâneas.</span>
+                Seu perfil está passando despercebido?
+              </span>
             </h2>
             <p className="text-base sm:text-lg text-purple-100/90 mb-3 max-w-lg">
               Até 80% da sua percepção em apps vem da sua foto de perfil.
@@ -38,17 +35,29 @@ export default function Home() {
             </p>
             <a
               href="#resultados"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium hover:opacity-90 transition-all duration-200 shadow-lg text-sm"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-medium hover:opacity-90 transition-all duration-200 shadow-lg text-sm group"
             >
               Veja exemplos reais de resultados
-              <span className="text-base">→</span>
+              <svg
+                className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
             </a>
           </div>
           {/* Grid de Cards à direita */}
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-5 w-full max-w-lg">
             {/* Card 1 */}
-            <div className="bg-[#10111A] rounded-2xl border border-white/10 p-5 flex flex-col items-start gap-2">
-              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-purple-500/10 mb-1">
+            <div className="bg-[#10111A] rounded-2xl border border-white/10 p-5 flex flex-col items-start gap-2 group hover:border-purple-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.15)]">
+              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-purple-500/10 mb-1 group-hover:bg-purple-500/20 transition-colors">
                 <svg
                   className="w-5 h-5 text-purple-400"
                   fill="none"
@@ -63,7 +72,7 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h4 className="text-base font-semibold text-white">
+              <h4 className="text-base font-semibold text-white group-hover:text-purple-200 transition-colors">
                 Mais Matches
               </h4>
               <p className="text-xs text-white/70">
@@ -71,8 +80,8 @@ export default function Home() {
               </p>
             </div>
             {/* Card 2 */}
-            <div className="bg-[#10111A] rounded-2xl border border-white/10 p-5 flex flex-col items-start gap-2">
-              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500/10 mb-1">
+            <div className="bg-[#10111A] rounded-2xl border border-white/10 p-5 flex flex-col items-start gap-2 group hover:border-blue-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
+              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-blue-500/10 mb-1 group-hover:bg-blue-500/20 transition-colors">
                 <svg
                   className="w-5 h-5 text-blue-400"
                   fill="none"
@@ -87,14 +96,16 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h4 className="text-base font-semibold text-white">Confiança</h4>
+              <h4 className="text-base font-semibold text-white group-hover:text-blue-200 transition-colors">
+                Confiança
+              </h4>
               <p className="text-xs text-white/70">
                 Transmita credibilidade e segurança.
               </p>
             </div>
             {/* Card 3 */}
-            <div className="bg-[#10111A] rounded-2xl border border-white/10 p-5 flex flex-col items-start gap-2">
-              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-emerald-500/10 mb-1">
+            <div className="bg-[#10111A] rounded-2xl border border-white/10 p-5 flex flex-col items-start gap-2 group hover:border-emerald-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(16,185,129,0.15)]">
+              <div className="w-9 h-9 flex items-center justify-center rounded-full bg-emerald-500/10 mb-1 group-hover:bg-emerald-500/20 transition-colors">
                 <svg
                   className="w-5 h-5 text-emerald-400"
                   fill="none"
@@ -109,14 +120,16 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h4 className="text-base font-semibold text-white">Atração</h4>
+              <h4 className="text-base font-semibold text-white group-hover:text-emerald-200 transition-colors">
+                Atração
+              </h4>
               <p className="text-xs text-white/70">
                 Fotos de qualidade aumentam o interesse.
               </p>
             </div>
             {/* Card 4 */}
-            <div className="bg-[#10111A] rounded-2xl border border-white/10 p-6 flex flex-col items-start gap-3">
-              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-pink-500/10 mb-2">
+            <div className="bg-[#10111A] rounded-2xl border border-white/10 p-6 flex flex-col items-start gap-3 group hover:border-pink-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.15)]">
+              <div className="w-10 h-10 flex items-center justify-center rounded-full bg-pink-500/10 mb-2 group-hover:bg-pink-500/20 transition-colors">
                 <svg
                   className="w-6 h-6 text-pink-400"
                   fill="none"
@@ -131,7 +144,9 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <h4 className="text-lg font-semibold text-white">Naturalidade</h4>
+              <h4 className="text-lg font-semibold text-white group-hover:text-pink-200 transition-colors">
+                Naturalidade
+              </h4>
               <p className="text-sm text-white/70">
                 Fotos naturais e espontâneas geram mais conexão e interesse.
               </p>
