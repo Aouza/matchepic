@@ -9,23 +9,23 @@ import "swiper/css/pagination";
 
 const slides = [
   {
-    image: "/before-after.jpg",
-    alt: "Antes e depois do MatchEpic",
+    image: "/hero_images/lucv-antes-e-depois.png",
+    alt: "Antes e depois do photai.gen",
     story: "Aumentou seus matches em 3x com as novas fotos.",
     quote:
       "As fotos ficaram tão naturais que meus amigos nem perceberam que eram geradas por IA. Agora meu perfil está muito mais atraente!",
     name: "Maria, 25 anos",
   },
   {
-    image: "/tinder-matches.jpg",
+    image: "/hero_images/lucv-antes-e-depois.png",
     alt: "Aumento de matches no Tinder",
-    story: "De 2 para 7 matches por dia após usar o MatchEpic.",
+    story: "De 2 para 7 matches por dia após usar o photai.gen.",
     quote:
       "Tive 2x mais matches na primeira semana. As fotos ficaram tão naturais que meus amigos acharam que foi um ensaio.",
     name: "Pedro, 32 anos",
   },
   {
-    image: "/quote-visual.jpg",
+    image: "/hero_images/lucv-antes-e-depois.png",
     alt: "Depoimento visual",
     story: "Perfil ficou mais atraente e autêntico.",
     quote:
@@ -60,7 +60,7 @@ const Results = () => {
           Resultados Reais de Quem Usou
         </h2>
         <p className="text-base sm:text-lg text-gray-300">
-          Veja como o MatchEpic transformou perfis e aumentou resultados de
+          Veja como o photai.gen transformou perfis e aumentou resultados de
           verdade.
         </p>
       </div>

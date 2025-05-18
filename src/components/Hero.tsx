@@ -11,9 +11,11 @@ const NavItem = ({ children }: { children: React.ReactNode }) => (
 const FloatingCard = ({
   className = "",
   delay = "0",
+  imageSrc,
 }: {
   className?: string;
   delay?: string;
+  imageSrc?: string;
 }) => (
   <div
     className={`relative rounded-2xl bg-gradient-to-br p-[2px] ${className}`}
@@ -30,7 +32,15 @@ const FloatingCard = ({
         </svg>
       </div>
       <div className="aspect-[3/4] rounded-lg overflow-hidden bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center">
-        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 blur-2xl opacity-50"></div>
+        {imageSrc ? (
+          <img
+            src={imageSrc}
+            alt="Foto Hero"
+            className="w-full h-full object-cover rounded-lg"
+          />
+        ) : (
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 blur-2xl opacity-50"></div>
+        )}
       </div>
       <div className="mt-3">
         <div className="h-2 w-16 bg-white/10 rounded"></div>
@@ -66,7 +76,7 @@ const Hero = () => {
           {/* Logo + Hamburger (mobile) */}
           <div className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-blue-500"></div>
-            <span className="text-white font-medium text-lg">MatchEpic</span>
+            <span className="text-white font-medium text-lg">photai.gen</span>
             <button
               className="sm:hidden flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none ml-2"
               aria-label="Abrir menu"
@@ -196,35 +206,35 @@ const Hero = () => {
                   <div className="flex -space-x-2 mb-2 sm:mb-0">
                     <div className="w-8 h-8 rounded-full border-2 border-[#0B0C15] overflow-hidden">
                       <img
-                        src="/avatars/avatar1.jpg"
+                        src="/hero_images/transferir.jpeg"
                         alt="Cliente"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="w-8 h-8 rounded-full border-2 border-[#0B0C15] overflow-hidden">
                       <img
-                        src="/avatars/avatar2.jpg"
+                        src="/hero_images/transferir.jpeg"
                         alt="Cliente"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="w-8 h-8 rounded-full border-2 border-[#0B0C15] overflow-hidden">
                       <img
-                        src="/avatars/avatar3.jpg"
+                        src="/hero_images/transferir.jpeg"
                         alt="Cliente"
                         className="w-full h-full object-cover"
                       />
                     </div>
                     <div className="w-8 h-8 rounded-full border-2 border-[#0B0C15] overflow-hidden">
                       <img
-                        src="/avatars/avatar4.jpg"
+                        src="/hero_images/transferir.jpeg"
                         alt="Cliente"
                         className="w-full h-full object-cover"
                       />
                     </div>
                   </div>
                   <span className="text-xs sm:text-sm text-gray-300 ml-0 sm:ml-2">
-                    +847 clientes já transformaram seus perfis com MatchEpic
+                    +847 clientes já transformaram seus perfis com photai.gen
                   </span>
                 </div>
                 {/* Rating e Reviews */}
@@ -270,14 +280,17 @@ const Hero = () => {
               <FloatingCard
                 className="absolute right-4 sm:right-12 -top-20 sm:-top-40 w-40 sm:w-56 from-emerald-500 to-blue-500"
                 delay="0s"
+                imageSrc="/hero_images/lucv.jpg"
               />
               <FloatingCard
                 className="absolute right-2 sm:right-10 top-16 sm:top-24 w-40 sm:w-56 from-purple-500 to-pink-500"
                 delay="-2s"
+                imageSrc="/hero_images/lucv.jpg"
               />
               <FloatingCard
                 className="absolute right-8 sm:right-20 top-[-60px] sm:top-[-100px] w-40 sm:w-56 from-blue-500 to-indigo-500"
                 delay="-4s"
+                imageSrc="/hero_images/lucv.jpg"
               />
             </div>
           </div>

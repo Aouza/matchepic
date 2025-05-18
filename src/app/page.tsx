@@ -33,7 +33,7 @@ export default function Home() {
             </p>
             <p className="text-sm text-white/80 mb-6 max-w-md">
               Com{" "}
-              <span className="font-semibold text-purple-200">MatchEpic</span>,
+              <span className="font-semibold text-purple-200">photai.gen</span>,
               selfies comuns viram fotos autênticas e irresistíveis.
             </p>
             <a
@@ -197,7 +197,7 @@ export default function Home() {
 
           <div className="mt-12 text-center">
             <p className="text-2xl font-bold text-white">
-              O MatchEpic resolve isso pra você: fotos profissionais, realistas
+              O photai.gen resolve isso pra você: fotos profissionais, realistas
               e naturais, direto do seu sofá.
             </p>
           </div>
