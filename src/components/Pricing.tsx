@@ -1,4 +1,5 @@
 import React from 'react';
+import PricingUrgencyHeader from './PricingUrgencyHeader';
 
 const packages = [
   {
@@ -52,13 +53,7 @@ const packages = [
 const Pricing = () => {
   return (
     <section className="relative py-24 bg-[#0B0C15]" id="precos">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-2">Pricing</h2>
-          <p className="text-base text-gray-400 mb-8">Escolha o plano ideal para transformar seu perfil com fotos profissionais geradas por IA.</p>
-        </div>
-      </div>
-
+      <PricingUrgencyHeader />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {packages.map((pack, idx) => (
@@ -99,6 +94,9 @@ const Pricing = () => {
           ))}
         </div>
       </div>
+
+      
+
       <p className="text-center text-sm text-gray-400 mt-8">
         Garantia de Satisfação: você tem direito a 1 revisão gratuita para garantir seu melhor resultado.{' '}
         <a href="/termos" className="text-blue-400 hover:text-blue-300 underline">Consulte nossos Termos</a>
