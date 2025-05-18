@@ -13,35 +13,38 @@ const PricingUrgencyHeader = () => (
         </div>
         <h2 className="text-3xl sm:text-4xl font-bold text-center mb-2">
           <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">
-            Mais Matches.
+            Perfil que atrai
           </span>{" "}
-          Perfil Profissional. Sem gastar com ensaio.
+          em até 72h.
+          <br />
+          Sem ensaio caro, sem deslocamento.
         </h2>
         <p className="text-base sm:text-lg text-gray-300 text-center max-w-xl">
-          Escolha seu pacote e receba fotos épicas em até 72h.
+          Compare e veja por que o photai.gen é a escolha mais inteligente para
+          seu perfil.
         </p>
       </div>
     </div>
-    {/* Comparativo MatchEpic vs Ensaio Tradicional */}
+    {/* Comparativo photai.gen vs Ensaio Tradicional */}
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
       <div className="bg-[#181A23] border border-white/10 rounded-2xl shadow-xl p-8">
         <div className="text-center mb-2">
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-            Comparativo: MatchEpic vs Ensaio Tradicional
+            Comparativo: photai.gen vs Ensaio Tradicional
           </h3>
           <p className="text-gray-400 text-sm">
             Escolha a melhor opção para seu perfil
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-          {/* MatchEpic */}
+          {/* photai.gen */}
           <div className="rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-900/10 to-blue-900/0 p-6 flex flex-col gap-3">
             <div className="flex items-center gap-3 mb-2">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg">
                 M
               </div>
               <div>
-                <h4 className="text-base font-bold text-white">MatchEpic</h4>
+                <h4 className="text-base font-bold text-white">photai.gen</h4>
                 <p className="text-emerald-400 text-xs font-semibold">
                   Recomendado
                 </p>
