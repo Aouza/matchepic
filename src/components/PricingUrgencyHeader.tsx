@@ -26,8 +26,8 @@ const PricingUrgencyHeader = () => (
       </div>
     </div>
     {/* Comparativo photai.gen vs Ensaio Tradicional */}
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-      <div className="bg-[#181A23] border border-white/10 rounded-2xl shadow-xl p-8">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div className="bg-[#181A23] border border-white/10 rounded-2xl shadow-xl shadow-blue-950/30 p-8">
         <div className="text-center mb-2">
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
             Comparativo: photai.gen vs Ensaio Tradicional
@@ -38,7 +38,13 @@ const PricingUrgencyHeader = () => (
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
           {/* photai.gen */}
-          <div className="rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-900/10 to-blue-900/0 p-6 flex flex-col gap-3">
+          <div className="relative rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-900/10 to-blue-900/0 p-6 flex flex-col gap-3">
+            {/* Selo */}
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0">
+              <span className="inline-flex items-center gap-2 bg-blue-600/10 text-blue-400 rounded-full px-4 py-1 text-xs font-semibold shadow-md">
+                💡 Escolha inteligente
+              </span>
+            </div>
             <div className="flex items-center gap-3 mb-2">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg">
                 M
@@ -58,21 +64,21 @@ const PricingUrgencyHeader = () => (
               </span>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <span className="text-lg">⚡</span>
+              <span className="text-lg">⏱️</span>
               <span className="text-gray-300">Tempo</span>
               <span className="ml-auto font-bold text-emerald-400">
                 Até 72h
               </span>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <span className="text-lg">🎯</span>
+              <span className="text-lg">📍</span>
               <span className="text-gray-300">Locais & Estilos</span>
               <span className="ml-auto font-bold text-emerald-400">
                 Vários presets
               </span>
             </div>
             <div className="flex items-center gap-2 text-sm">
-              <span className="text-lg">✨</span>
+              <span className="text-lg">📆</span>
               <span className="text-gray-300">Agendamento</span>
               <span className="ml-auto font-bold text-emerald-400">
                 Online, prático

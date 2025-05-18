@@ -78,18 +78,6 @@ const Features = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 bg-clip-text text-transparent">
-              Por que o photai.gen funciona melhor que filtros ou ensaio?
-            </span>
-          </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Nossa IA foi treinada com milhares de fotos profissionais para criar
-            imagens que destacam sua melhor versão.
-          </p>
-        </div>
-
         {/* Badge de destaque */}
         <div className="flex justify-center mb-6 sm:mb-8">
           <div className="inline-flex items-center space-x-2 rounded-full bg-white/10 px-3 py-1 text-xs sm:text-sm text-blue-200 backdrop-blur-sm">
