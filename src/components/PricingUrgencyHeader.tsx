@@ -2,9 +2,9 @@ import React from "react";
 
 const PricingUrgencyHeader = () => (
   <>
-    <div className=" mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+    <div className=" mx-auto px-4 sm:px-6 lg:px-8 ">
       <div className="flex flex-col items-center w-full">
-        <div className="inline-flex items-center space-x-2 rounded-full bg-orange-500 px-4 py-2 text-sm text-white font-semibold mb-6 shadow-lg">
+        <div className="inline-flex items-center space-x-2 rounded-full bg-orange-500 px-4 py-2 text-sm text-white font-semibold mb-6 shadow-lg mt-12">
           <span>⚠️</span>
           <span>
             Vagas limitadas: pedidos feitos até domingo recebem em até 72h.
@@ -26,22 +26,22 @@ const PricingUrgencyHeader = () => (
       </div>
     </div>
     {/* Comparativo photai.gen vs Ensaio Tradicional */}
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-      <div className="bg-[#181A23] border border-white/10 rounded-2xl shadow-xl shadow-blue-950/30 p-8">
+    <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-16">
+      <div className="bg-[#181A23] border border-white/10 rounded-2xl shadow-xl shadow-blue-950/30 p-8 relative">
         <div className="text-center mb-2">
           <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
             Comparativo: photai.gen vs Ensaio Tradicional
           </h3>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm mb-12">
             Escolha a melhor opção para seu perfil
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
           {/* photai.gen */}
-          <div className="relative rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-900/10 to-blue-900/0 p-6 flex flex-col gap-3">
-            {/* Selo */}
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 md:left-4 md:translate-x-0">
-              <span className="inline-flex items-center gap-2 bg-blue-600/10 text-blue-400 rounded-full px-4 py-1 text-xs font-semibold shadow-md">
+          <div className="rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-900/10 to-blue-900/0 p-6 flex flex-col gap-3 relative">
+            {/* Badge premium centralizada sobre a borda do topo */}
+            <div className="absolute left-1/2 -translate-x-1/2 -top-5 z-10">
+              <span className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-400/20 to-blue-600/30 text-blue-400 font-bold rounded-full px-4 py-1 text-xs sm:text-sm shadow-lg ring-2 ring-blue-400/10 backdrop-blur-md border border-blue-400/20 whitespace-nowrap">
                 💡 Escolha inteligente
               </span>
             </div>

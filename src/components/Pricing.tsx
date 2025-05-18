@@ -53,7 +53,7 @@ const packages = [
 
 const Pricing = () => {
   return (
-    <section className="relative py-24 bg-[#0B0C15]" id="precos">
+    <section className="relative py-12 bg-[#0B0C15]" id="precos">
       <div className="max-w-2xl mx-auto text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-white">
           Escolha o pacote ideal para transformar seu perfil
